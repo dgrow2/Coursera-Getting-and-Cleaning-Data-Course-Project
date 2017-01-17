@@ -1,0 +1,102 @@
+This file contains information on the variables contained in both the data analysis, as 
+well as in the data set
+
+Variables in run_analysis.R
+
+note: paticipants were initially divided into two groups a training set and test set
+More detailed information on the raw data set can be found at
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+1.) subject_test = subject test data file which contains data on which subjects were 
+in the test set
+
+2.) x_test = contains the data on from the accelerometers during different activities. 
+Each row is a different activity or subject
+
+3.) Y_test = the key to say what activity id each participant should be assigned to each 
+row in x_test data set
+
+4.) subject_train = list of subjects that were in the training data set
+
+5.) X_train = data from the accelermoters from the training set group
+
+6.) Y_train = list of activity ids for the training set group
+
+7.) Features = a description of the the source of the accelleromter data
+
+8.) activity lables= a key describing what activity ID is assigned to a particular 
+activity.
+
+9.) trainData = handle for the data set containing all of the data from the training group
+merged together
+
+10.) testData = handle for the data set containing all of the data from the
+test groups merged together
+
+11.) totalData = all data from test and training groups merged together, with column names
+
+12.) finalData = totalData with assigned activity types, describing what activity was 
+being performed for each row in the data set
+
+13.) tidy = finalData, grouped by activity type and subjectID
+
+
+Variables in the tidy.txt
+note* For the listed variables, several transforms were made to the data. the tidy.R analysis contains
+only the mean and the standard deviation of each feature.
+
+The first five columns of tidy.R are
+1.) ActivityType Group = a decription of what activity was being performed 
+2.) subject = the subjectID
+3.) ActivityID = the ID code for the activity type
+4.) ActivtyType= the type of activity being perfomred
+5.) SujbectID the subject ID
+
+the next 79 lines contain data that was extracted from the accleromters. In tidy.R, only data transforms that
+included the mean or standard deviation were included:
+
+"The features selected for this database come from the accelerometer and gyroscope 3-axial raw 
+signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were 
+captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order 
+low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the 
+acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) 
+using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals 
+(tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated 
+using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, 
+fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean"
+
+quoted from the UCI dataset folder README. Source can be found at:
+https://archive.ics.uci.edu/ml/machine-learning-databases/00240/
+
+
